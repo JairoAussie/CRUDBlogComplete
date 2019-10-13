@@ -13,8 +13,10 @@ const userRouter = require("./routes/user_routes");
 
 const port = process.env.PORT || 3000;
 const app = express();
+const uri = "mongodb+srv://jairo:abcd1234@cluster0-b2f3i.mongodb.net/blog_app?retryWrites=true&w=majority";
 
-const dbConn = process.env.MONGODB_URI || "mongodb://localhost/blog_app"
+//const dbConn = process.env.MONGODB_URI || uri
+const dbConn = uri
 mongoose.connect(
 	dbConn,
 	{
